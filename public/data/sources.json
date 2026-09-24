@@ -1,0 +1,35 @@
+[
+  {
+    "id": "icc",
+    "name": "International Criminal Court",
+    "type": "primary",
+    "url": "https://www.icc-cpi.int",
+    "description": "Official ICC website and documentation"
+  },
+  {
+    "id": "ph-govt",
+    "name": "Philippine Government",
+    "type": "government",
+    "description": "Official Philippine government statements and documents"
+  },
+  {
+    "id": "ovp",
+    "name": "Office of the Vice President",
+    "type": "government",
+    "description": "Official statements from the Office of the Vice President"
+  },
+  {
+    "id": "un",
+    "name": "United Nations",
+    "type": "international",
+    "url": "https://www.un.org",
+    "description": "UN documents and reports"
+  },
+  {
+    "id": "hrw",
+    "name": "Human Rights Watch",
+    "type": "international",
+    "url": "https://www.hrw.org",
+    "description": "Human rights documentation and reports"
+  }
+]

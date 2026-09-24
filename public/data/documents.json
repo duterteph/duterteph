@@ -1,0 +1,21 @@
+[
+  {
+    "id": "doc-1",
+    "title": "Rome Statute of the International Criminal Court",
+    "organization": "International Criminal Court",
+    "date": "1998-07-17",
+    "type": "Treaty",
+    "sourceType": "primary",
+    "url": "https://www.icc-cpi.int/resource-library/documents/rs-eng.pdf",
+    "summary": "The founding treaty of the International Criminal Court"
+  },
+  {
+    "id": "doc-2",
+    "title": "ICC Pre-Trial Chamber Decision",
+    "organization": "International Criminal Court",
+    "date": "2021-09-15",
+    "type": "Official Decision",
+    "sourceType": "primary",
+    "summary": "Decision authorizing investigation into the situation in the Philippines"
+  }
+]

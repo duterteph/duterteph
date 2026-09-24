@@ -1,0 +1,236 @@
+{
+  "name": "News Monitor Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
+        }
+      },
+      "name": "Schedule Every 6 Hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "=https://news.google.com/rss/search?q=Sara+Duterte+ICC",
+        "options": {}
+      },
+      "name": "Fetch RSS Feed",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "multiplex",
+        "options": {}
+      },
+      "name": "Filter Relevant Articles",
+      "type": "n8n-nodes-base.merge",
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "prompt": "=Summarize this news article in 2-3 sentences. Focus on factual information only:\n\nTitle: {{ $json.title }}\nContent: {{ $json.content }}",
+        "options": {
+          "maxTokens": 200
+        }
+      },
+      "name": "AI Summary",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.category }}",
+              "operation": "contains",
+              "value2": "Sara Duterte"
+            }
+          ]
+        }
+      },
+      "name": "Check Relevance",
+      "type": "n8n-nodes-base.if",
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "formTitle": "Review News Article",
+        "formDescription": "Please review this article before publishing",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Article Title",
+              "fieldType": "text",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Summary",
+              "fieldType": "textarea",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Source",
+              "fieldType": "text",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Verification Status",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  { "option": "verified" },
+                  { "option": "official-statement" },
+                  { "option": "allegation" },
+                  { "option": "not-verified" }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Approve for Publication?",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  { "option": "Yes" },
+                  { "option": "No" }
+                ]
+              }
+            }
+          ]
+        },
+        "options": {
+          "respondWithOptions": {
+            "values": {
+              "respondWith": "text"
+            }
+          }
+        }
+      },
+      "name": "Human Approval Form",
+      "type": "n8n-nodes-base.form",
+      "position": [1250, 300],
+      "webhookId": "human-review"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.approval }}",
+              "operation": "equals",
+              "value2": "Yes"
+            }
+          ]
+        }
+      },
+      "name": "Check Approval",
+      "type": "n8n-nodes-base.if",
+      "position": [1450, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "owner": "={{ $env.GITHUB_OWNER }}",
+        "repository": "={{ $env.GITHUB_REPO }}",
+        "filePath": "public/data/news.json",
+        "commitMessage": "Update news data",
+        "fileContent": "={{ JSON.stringify($json) }}"
+      },
+      "name": "Update GitHub",
+      "type": "n8n-nodes-base.github",
+      "position": [1650, 300]
+    }
+  ],
+  "connections": {
+    "Schedule Every 6 Hours": {
+      "main": [
+        [
+          {
+            "node": "Fetch RSS Feed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch RSS Feed": {
+      "main": [
+        [
+          {
+            "node": "Filter Relevant Articles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Relevant Articles": {
+      "main": [
+        [
+          {
+            "node": "AI Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Summary": {
+      "main": [
+        [
+          {
+            "node": "Check Relevance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Relevance": {
+      "main": [
+        [
+          {
+            "node": "Human Approval Form",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Human Approval Form": {
+      "main": [
+        [
+          {
+            "node": "Check Approval",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Approval": {
+      "main": [
+        [
+          {
+            "node": "Update GitHub",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

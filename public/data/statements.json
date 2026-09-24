@@ -1,0 +1,11 @@
+[
+  {
+    "id": "statement-1",
+    "date": "2026-09-15",
+    "speaker": "Sample Speaker",
+    "statement": "This is a placeholder statement. Real statements should be added with proper verification and sourcing.",
+    "context": "Context for the statement",
+    "source": "ovp",
+    "type": "paraphrase"
+  }
+]

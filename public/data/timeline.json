@@ -1,0 +1,34 @@
+[
+  {
+    "id": "timeline-1",
+    "date": "2018-03-17",
+    "title": "Philippines withdraws from ICC",
+    "description": "The Philippines officially withdrew from the Rome Statute, the treaty that established the International Criminal Court.",
+    "category": "International Developments",
+    "sources": ["icc", "ph-govt"]
+  },
+  {
+    "id": "timeline-2",
+    "date": "2019-03-17",
+    "title": "ICC withdrawal becomes effective",
+    "description": "The Philippines' withdrawal from the ICC Rome Statute takes effect one year after notification.",
+    "category": "International Developments",
+    "sources": ["icc"]
+  },
+  {
+    "id": "timeline-3",
+    "date": "2021-09-15",
+    "title": "ICC Pre-Trial Chamber authorizes investigation",
+    "description": "The ICC Pre-Trial Chamber authorized an investigation into alleged crimes against humanity in the Philippines.",
+    "category": "ICC",
+    "sources": ["icc"]
+  },
+  {
+    "id": "timeline-4",
+    "date": "2022-06-30",
+    "title": "Sara Duterte assumes office as Vice President",
+    "description": "Sara Duterte was inaugurated as the 15th Vice President of the Philippines.",
+    "category": "Philippine Government",
+    "sources": ["ph-govt", "ovp"]
+  }
+]

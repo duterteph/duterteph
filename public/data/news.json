@@ -1,0 +1,24 @@
+[
+  {
+    "id": "news-1",
+    "title": "Sample News Article - ICC Updates",
+    "date": "2026-09-20",
+    "source": "International News Source",
+    "category": "ICC",
+    "summary": "This is a placeholder article. Real content should be added through the n8n workflow after human approval.",
+    "content": "Full article content would appear here after being processed through the n8n workflow with human verification.",
+    "verificationStatus": "not-verified",
+    "relatedTimeline": ["timeline-3"]
+  },
+  {
+    "id": "news-2",
+    "title": "Sample News Article - Philippine Government",
+    "date": "2026-09-21",
+    "source": "Local News Source",
+    "category": "Philippine Government",
+    "summary": "This is a placeholder article. Real content should be added through the n8n workflow after human approval.",
+    "content": "Full article content would appear here after being processed through the n8n workflow with human verification.",
+    "verificationStatus": "not-verified",
+    "relatedTimeline": ["timeline-4"]
+  }
+]

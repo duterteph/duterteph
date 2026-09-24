@@ -1,0 +1,67 @@
+[
+  {
+    "id": "jurisdiction",
+    "term": "Jurisdiction",
+    "definition": "The legal authority of the ICC to investigate and prosecute crimes. The ICC has jurisdiction over genocide, crimes against humanity, war crimes, and the crime of aggression.",
+    "context": "The ICC can only exercise jurisdiction if the crime was committed on the territory of a State Party, or by a national of a State Party, or if the UN Security Council refers the situation.",
+    "source": "Rome Statute, Article 12-13"
+  },
+  {
+    "id": "complementarity",
+    "term": "Complementarity",
+    "definition": "The principle that the ICC complements, rather than replaces, national criminal justice systems. The ICC can only intervene when national courts are unwilling or unable to genuinely investigate or prosecute.",
+    "context": "This means the ICC does not replace national jurisdiction but acts when national systems fail to do so.",
+    "source": "Rome Statute, Preamble and Article 17"
+  },
+  {
+    "id": "investigation",
+    "term": "Investigation",
+    "definition": "The process of gathering and examining information and evidence by the ICC Prosecutor. An investigation is distinct from charges or a judicial finding of guilt.",
+    "context": "Authorization to investigate does not mean that charges will be filed, or that any individual has been found guilty of any crime.",
+    "source": "Rome Statute, Article 53-54"
+  },
+  {
+    "id": "admissibility",
+    "term": "Admissibility",
+    "definition": "The criteria the ICC uses to determine whether a case can be heard. A case must be of sufficient gravity and the State must be unwilling or unable to genuinely investigate or prosecute.",
+    "source": "Rome Statute, Article 17"
+  },
+  {
+    "id": "presumption",
+    "term": "Presumption of Innocence",
+    "definition": "A fundamental principle that anyone accused of a crime is presumed innocent until proven guilty in a fair trial. This applies to all ICC proceedings.",
+    "context": "Investigation, or even charges, do not constitute a finding of guilt.",
+    "source": "Rome Statute, Article 66"
+  },
+  {
+    "id": "warrant",
+    "term": "Warrant of Arrest",
+    "definition": "A judicial order issued by the ICC Pre-Trial Chamber authorizing the arrest of an individual. It requires reasonable grounds to believe the person committed crimes within ICC jurisdiction.",
+    "context": "A warrant is not a conviction. It is issued to secure the appearance of an accused person before the Court.",
+    "source": "Rome Statute, Article 58"
+  },
+  {
+    "id": "charges",
+    "term": "Charges",
+    "definition": "Formal accusations of criminal conduct brought by the Prosecutor and confirmed by the Pre-Trial Chamber. Charges must be proven beyond reasonable doubt at trial.",
+    "source": "Rome Statute, Article 61"
+  },
+  {
+    "id": "trial",
+    "term": "Trial",
+    "definition": "The judicial process where evidence is presented, examined, and tested before a panel of judges. The accused has the right to a fair and public hearing.",
+    "source": "Rome Statute, Article 64-76"
+  },
+  {
+    "id": "conviction",
+    "term": "Conviction",
+    "definition": "A judicial finding of guilt by the Trial Chamber, made only after the Prosecutor proves guilt beyond reasonable doubt.",
+    "source": "Rome Statute, Article 66, 74"
+  },
+  {
+    "id": "acquittal",
+    "term": "Acquittal",
+    "definition": "A judicial finding that the accused is not guilty. The accused must be released immediately.",
+    "source": "Rome Statute, Article 74, 81"
+  }
+]

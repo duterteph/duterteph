@@ -1,0 +1,11 @@
+[
+  {
+    "id": "claim-1",
+    "claim": "Sample claim placeholder - Replace with actual documented claims",
+    "date": "2026-09-15",
+    "status": "not-verified",
+    "context": "This is a placeholder. Real claims should be added with proper verification and sourcing.",
+    "uncertainties": "This is sample data for demonstration purposes only.",
+    "sources": ["icc"]
+  }
+]
