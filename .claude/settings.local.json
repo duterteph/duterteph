@@ -5,7 +5,8 @@
       "Bash(npm install *)",
       "Bash(rtk npm *)",
       "Bash(rtk ls *)",
-      "Bash(rtk du *)"
+      "Bash(rtk du *)",
+      "Bash(rtk git *)"
     ]
   }
 }
