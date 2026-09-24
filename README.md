@@ -2,7 +2,7 @@
 
 An interactive, documentary-style website providing sourced information about Sara Duterte, the International Criminal Court (ICC), and related developments.
 
-🔗 **Live Site:** [https://USERNAME.github.io/duterteph/](https://USERNAME.github.io/duterteph/)
+🔗 **Live Site:** [https://duterteph.github.io/duterteph/](https://duterteph.github.io/duterteph/)
 
 ## Features
 
